@@ -11,10 +11,8 @@ const Posts = ({ syncPosts }) => {
     ) : <p className='text-center'>There are no posts yet.</p>
 };
 
-const mapStateToProps = state => {
-    return {
-        syncPosts: state.posts.posts
-    }
-};
+const mapStateToProps = state => ({
+    syncPosts: state.posts.posts
+});
 
 export default connect(mapStateToProps, null)(Posts);
